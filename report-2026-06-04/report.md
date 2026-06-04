@@ -1,5 +1,5 @@
 # 2026-06-04 市場泡沫風險評估報告
-> 報告日期：2026-06-04；執行日：2026-06-04 Asia/Taipei；ISO 週次：2026-W23；前次基準：report-2026-06-01（3天前）
+> 報告日期：2026-06-04；執行日：2026-06-04 Asia/Taipei（Thursday）；ISO 週次：2026-W23；前次基準：report-2026-06-01（3天前）
 
 ## §1 六維度風險條圖
 
@@ -13,263 +13,254 @@
 | 結構性槓桿 | ▰▰▰▰▰▰▰▱▱▱ | 73 | 74 | −1 |
 | **加權總分** | ▰▰▰▰▰▰▱▱▱▱ | **68【高】** | 68 | 0 |
 
-（權重 22/13/18/12/20/15；|Δ|≥10 才標 ⚠，本次無任一維度達標。「全球槓桿擴散訊號」本週未觸發，結構性槓桿不加 ◆。）
+> 本週無任何單一維度 |Δ| ≥ 10（⚠ 未觸發）。「全球槓桿擴散訊號」本週未觸發（無 ◆）。
 
 ## §2 歷史錨點相似度
 
 | 錨點 | 相似度 | 條圖 | 標記 |
 |---|---:|---|---|
-| 1997 早期建設 | 25% | ▰▰▱▱▱▱▱▱▱▱ |  |
-| 1998 LTCM 衝擊 | 22% | ▰▰▱▱▱▱▱▱▱▱ |  |
-| 1999 晚期狂熱 | 60% | ▰▰▰▰▰▰▱▱▱▱ | ◀ 最貼近 |
-| 2000/3 頂點 | 42% | ▰▰▰▰▱▱▱▱▱▱ |  |
-| 2021/12 Meme 頂 | 48% | ▰▰▰▰▱▱▱▱▱▱ |  |
+| 1997 早期建設 | 22% | ▰▰▱▱▱▱▱▱▱▱ |  |
+| 1998 LTCM 衝擊 | 25% | ▰▰▱▱▱▱▱▱▱▱ |  |
+| 1999 晚期狂熱 | 70% | ▰▰▰▰▰▰▰▱▱▱ | ◀ 最貼近 |
+| 2000/3 頂點 | 58% | ▰▰▰▰▰▱▱▱▱▱ |  |
+| 2021/12 Meme 頂 | 52% | ▰▰▰▰▰▱▱▱▱▱ |  |
 
 ## §3 三角訊號
 
 | 指標 | 本次數值 | vs 前次 |
 |---|---|---|
-| S&P 500 | 7,553.68（2026-06-03 收盤） | ▼ −0.3%（前次 7,580.06） |
-| WTI 原油 | $95.75 /bbl（2026-06-03） | ▲ +9.8%（前次 $87.2） |
-| 10Y Treasury | 4.48%（2026-06-04） | ▲ +3 bps（前次 4.45%） |
+| S&P 500 | 7,553.68（2026-06-03 收盤） | ▼ −0.3%（前次 ~7,580） |
+| WTI 原油 | $95.68 /bbl（2026-06-03） | ▲ +9.7%（前次 ~$87.2） |
+| 10Y Treasury | 4.46%（2026-06-02） | ▼ −1 bps（前次 4.47%） |
 
-**三者狀態**：出現分歧（原油在重新定價）。股市自 6/02 盤中歷史高點（>7,609）小幅回落、9 連漲中止，油價與殖利率同步走高。
+**三者狀態**：出現分歧（WTI 原油在重新定價）。
 
-- 股市：S&P 500 收 7,553.68，較前次 −0.3%，仍高懸於 50 日均線（~7,100）之上、RSI ~75 過熱區；6/02 才創 7,609 新高後拉回。
-- WTI 原油：$95.75/bbl，較前次急彈 +9.8%，受美伊和談不確定性與中東地緣風險、連續第六週原油庫存去化推升。
-- 10Y 殖利率：4.48%，較前次 +3 bps，主要受強於預期的民間就業（5 月 +12.2 萬）與油價推升的通膨溢價驅動。
+- 股市：7,553.68（06-03 收盤），較前次 ▼ −0.3%；06-02 盤中突破 7,600 創歷史新高後，06-03 回吐 0.74%，仍處歷史高檔。
+- WTI 原油：$95.68（06-03），較前次 ▲ +9.7%；美伊和談不確定性延續，地緣風險溢價推升油價連三日走高（FRED DCOILWTICO 06-01 報 $95.96）。
+- 10Y 殖利率：4.46%（06-02，FRED DGS10），主要驅動因素為 breakeven 微降（通膨預期回落），實質殖利率持平。
 
-**格局轉變**：前次（6/01）為「股強、油弱（5 月 −17%）、債中立」；本次轉為「股微幅回落、油價急彈、殖利率小幅上行」——油價由空翻多，成為通膨／殖利率鏈條的新邊際變數。
+**格局轉變**：前次為「股強 / 油弱 / 債中立」；本次轉為「股高檔回吐 / 油轉強 / 債持平偏降」——油市與股市方向互換，油價由空翻多。
 
-**10Y 成因拆解（`ΔDGS10 ≈ ΔDFII10 + ΔT10YIE`，拆的是週變動、非水位）**：本執行環境直連 FRED／Treasury 均遭 WAF 403，`scripts/fetch_macro.py` 全序列 `fetch_failed`、`decomposition.status = unavailable_no_daily_history`，故 **本週 Δ 分解不可用——無日序資料**，不臆造 Δ。僅列當前 spot 水位供參：
+**10Y 成因拆解（`ΔDGS10 ≈ ΔDFII10 + ΔT10YIE`，拆的是週變動、非水位）**：
 
-- ΔDFII10 實質殖利率週變動：不可用（spot 2.08%，2026-06-03）
-- ΔT10YIE 損益平衡通膨週變動：不可用（spot 約 2.40%，以 DGS10−DFII10 `derived`；FRED 直接序列最近可見 2.5%＠2026-05-08）
-- 判定：分解不可用（無日序，real/breakeven 主導歸因本週無法判定）
+- ΔDFII10 實質殖利率週變動：0 bps（持平，FRED DFII10：06-01 2.07% → 06-02 2.07%）
+- ΔT10YIE 損益平衡通膨週變動：−2 bps（向下，FRED T10YIE：06-01 2.40% → 06-03 2.38%）
+- 判定：**breakeven-driven（向下）**——ΔT10YIE（−2 bps）主導，ΔDFII10 持平。註：ΔDGS10 −1 bps ≈ 0 + (−2) bps，約 1 bps 差異來自各序列最近觀測日不同（DGS10 06-02、T10YIE 06-03）之四捨五入，非獨立交叉驗證。
 
-**扳機鏈：油 → 通膨預期 → Fed 受限 → refinancing 成本**：WTI 單週 +9.8% 是本週最顯著的鏈條啟動跡象；若油價續揚並滲入損益平衡通膨，將壓縮 4 月 29 日 FOMC（3.50–3.75%、4 票鷹派異議為 1992 年以來最多）的降息空間，降低「Fed put」可得性。惟目前信用利差仍極緊（HY OAS 2.72%、IG OAS 0.76%），refinancing 端尚未出現壓力，鏈條僅在「通膨預期」前段醞釀。
+**扳機鏈：油 → 通膨預期 → Fed 受限 → refinancing 成本**：本週 WTI ▲ +9.7% 但 ΔT10YIE ▼ −2 bps，市場將油價上行解讀為地緣 / 供給側溢價，而非廣泛需求型通膨；「油 → 通膨預期」傳導鏈當前未啟動，breakeven 仍錨定，Fed put 維持可得（Fed funds 上緣 3.75% 連續按兵不動）。
 
-**結論**：估值（CAPE 近歷史次高）+ 槓桿（margin debt 創高、0DTE ~60%）構成高位勢能；融資面（信用利差極緊）尚未轉緊，計時扳機未擊發。三者未同向偏高（股微跌、油債上行），故不加 ⚠；但油價急彈為本週新增的通膨—利率觀察點，須留意其是否由地緣短脈衝轉為持續性重定價。
+**結論**：估值 + 槓桿蓄積高位能，但 financing 扳機未擊發——HY OAS 271 bps、IG OAS 74 bps 同處極窄、10Y 微降、breakeven 錨定、VIX 15.77 低檔。三者未同向偏高（油升但股回吐、債降），配置尚未對齊，未點火；故本段不加 ⚠。
 
 ## 六維度評分
 
 ### 1. 估值溢價：81 / 100（weight 22%）
 
-**一句話評分依據：** Shiller CAPE 約 41.4–42.5（GuruFocus 41.44＠6/01、multpl 42.53），仍逾長期均值（~17.3）2.4 倍、為 1999 年峰值 44.19 的約 95%；S&P 500 trailing P/E ~27.4–28.5、forward ~21.8；Mag 7 仍全面溢價（NVDA forward ~47、MSFT ~24.5、GOOGL ~17.4）——估值極致但本週未再升溫，S&P 自高點小幅回落，分數自 82 微降至 81。
-
-- **AI 基本面現實檢查（capex）：** 仍在「上調」而非下修——Meta 將 2026 capex 由 $1,150–1,350 億上修至 $1,250–1,450 億，四大 hyperscaler 合計約 $7,000–7,250 億（YoY +約 77%）。capex 未見轉折，估值風險尚未因 capex 削減而跳升。
-- **AI compute 供需檢查：** Google I/O（5/19）揭露月處理 token 達 3.2 quadrillion（YoY 約 7 倍）、OpenAI APIs ~150 億 token/分鐘，需求側強勁；TrendForce 顯示 HBM/DRAM 供給偏緊、HBM4 報價 mid-2026 約 +30%——記憶體偏緊與 token 爆量指向「產能仍被利用率吸收」，未見 overcapacity 訊號。惟未取得 GPU 租賃利用率直接證據（標 ✗ NOT DISCLOSED），不據此斷言供需完全平衡。
-- **TP-upgrade 階段訊號：** Morgan Stanley 將 NVDA 目標調至 $288（約 22× CY2027 EPS $13.08），論述核心為「$8,840 億資料中心營收、領先市場共識約 $1,000 億」——偏 **EPS／營收驅動** 而非單純倍數擴張；Marvell 6/02 單日 +32.5%（Huang 稱其為「下一家兆元公司」）屬敘事性大型股動能。本期主流上調未呈現「跨 2+ 旗艦同步倍數重定價」的晚週期型態，故不額外加旗。
+- Shiller CAPE：41.44（2026-06，GuruFocus），為歷史中位數（約 16）的 2.6 倍，達 1999 年頂部（44.2）之 94%；較前次 41.6 微幅回落。
+- S&P 500 前向 P/E 約 28×（歷史均值約 16×）；Mag 7 加權 P/E 仍處歷史高位區間。
+- AI 基本面實況檢核：hyperscaler 2026 capex **仍在上調**——MSFT $190B、AMZN $200B、GOOGL $175–185B、META 上修至 $125–145B，四家合計約 $725B（年增 77%）；capex 未見削減，估值風險未急升但支出極端。
+- AI 算力供需實況檢核：本次**未取得**直接利用率 / 定價證據（GPU 租金、HBM/DRAM 價格、加速器交期、order-digestion）。依規則下修結論為「capex / Nvidia 營收仍支撐，但未取得直接利用率證據」，相關利用率 / 定價項目標 ✗ NOT DISCLOSED。
+- TP-upgrade phase signal：過去 14 日 NVDA（Morgan Stanley $285/$288 OW、Jefferies $300）與 TSMC（Goldman Sachs ADR $370–375，較前次 +35%，伴隨 2026 營收成長預估由 22% 上修至 30%）兩檔 bellwether 同遭調升。TSMC 一案 EPS 修正實質貢獻顯著，惟 TP 跳升幅度大、multiple 擴張並存；判定為 **mixed 偏 multiple**，屬晚期訊號傾向，但盈餘仍在實質拉抬，未全面轉為敘事型 re-rating。
+- **評分邏輯**：S&P 500、CAPE 較前次微幅回落，capex 上調撐住盈餘敘事但估值絕對水位仍極端，無新上行催化。82 → 81（−1）。
 
 ### 2. 市場廣度：45 / 100（weight 13%）
 
-**一句話評分依據：** RSP（等權）YTD 領先 SPY 約 5 個百分點（廣度方向仍正面），但前十大權重仍約 35.6–37%、僅 52.2% 成分股站上 50 日均線（短線參與度偏低）、指數 RSI ~75 過熱，創高主要仍由 AI／半導體主導，廣度未全面啟動，維持 45。
-
-- RSP vs SPY：RSP YTD 總報酬約 +9.7%，領先 SPY 約 5 ppt（mega-cap 主導鬆動）。
-- 前十大集中度：約 35.6%（4 月 S&P DJI）至逾 37%（部分來源），仍處歷史高位。
-- 漲跌與新高新低：6/02 指數 7,609.78 遠高於 200 日均線（~6,842），惟新高家數「中等」、短長期均線參與度均「低於平均」，內部廣度落後於指數價格。
+- RSP（等權）對 SPY（市值加權）：RSP YTD 跑贏 SPY 約 5 個百分點（RSP YTD 約 +9.68%），廣度結構性改善延續。
+- S&P 500 前十大集中度：35.59%（2026-04），自 2025 年底約 41% 回落，但仍處歷史高位。
+- Advance/decline、new high/low：本次三管道（直抓 / API / WebSearch）未取得當期可用數值，標 ⛔ FETCH FAILED；廣度評分以 RSP/SPY 與集中度為主。
+- **評分邏輯**：等權跑贏 + 集中度離峰之結構性改善持續，惟 06-02/06-03 反彈由晶片股主導（XLK +2.5%）、領導再度收斂，正反相抵。維持 45（Δ 0）。
 
 ### 3. 投機行為：71 / 100（weight 18%）
 
-**一句話評分依據：** SpaceX 巨型 IPO 由 S-1 具體化為「最快 6/12 於 Nasdaq 掛牌（SPCX）、擬募資至多 $750 億、估值逾 $2 兆」，為史上規模空前、典型晚週期訊號；惟本週未出現合格 microcap moonshot（沖抵部分過熱），分數自 70 微升至 71。
-
-- +AI 改名／SPAC：本週未發現合格「+AI 改名」個案；IPO 管線仍約 92% 為 AI／AI-adjacent（史上最集中）。
-- IPO 熱度：SpaceX 擬募 $750 億（CNBC「Mega-IPO 恐為市場頂部訊號」5/22）；SpaceX、OpenAI 仍未獲利即籌備天量上市。
-- Microcap thematic moonshots：依篩選條件（單日 ≥100%、市值 <$1B、堆疊 2+ 熱門主題、弱基本面）掃描本週最大漲幅股，**本週無合格標的**（6 月領漲如 VIDA +53%、LEGN +42% 均未達單日 +100% 門檻；Marvell +32.5% 為大型股，不符 microcap）。
-- 內部人賣股：過去 14 日未取得具 Form 4 申報日／交易日／EDGAR URL 的內部人群聚賣壓明細，標 ✗ NOT DISCLOSED，不引用陳舊名單。
-- OpenAI／Anthropic 營收軌跡（集中度風險）：OpenAI 約 $250 億年化（2 月）／月營收約 $20 億；Anthropic 約 $300 億年化（4 月，自 2025 年底 $90 億陡升）——營收高速成長同時亦凸顯敘事集中。
-- 即將上市巨型 IPO（流動性抽水）：SpaceX 6/12、OpenAI／Anthropic 2026 年內，合計潛在抽水可觀。
+- IPO 熱度：本週 SpaceX 申報以 $135/股、5.556 億股、估值 $1.77 兆定價，roadshow 6/4 啟動、預計 6/11–6/12 那斯達克掛牌（SPCX），募資上看 $750 億——若達標將為史上最大 IPO（超越 Aramco）。同週 Blackstone Digital Infrastructure Trust（BXDC，$17.5 億、AI 資料中心、尚未持有資產）與 Fervo Energy（FRVO，$18.9 億、史上最大再生能源 IPO）掛牌。
+- 上市管線：OpenAI 最快 9 月 IPO（3 月估值 $852B、年化營收 >$20B）；Anthropic 5 月底以 $965B post-money 募 $65B、營收 run-rate 約 $47B、已遞交保密申報。
+- +AI rename / SPAC：SpaceX 完成吸收 xAI 並將更名「SpaceXAI」（mega-cap 級 +AI 整併）；Investcorp AI Acquisition 與 Blue Finance 之 SPAC 合併（4/8，逾 7 日窗口，列背景）。
+- 0DTE 期權佔 SPX 約 59%（Cboe）；quantum 板塊狂熱（S&P Kensho Quantum 指數截至 5 月底 +69.3%）。
+- Microcap thematic moonshots：掃描本週（06-01～06-03）最大單日漲幅標的，**未發現**符合條件者（≥100% 單日、<$1B 市值、≥2 個堆疊熱門題材、弱基本面）；月漲幅最大者僅 VIDA +53%、LEGN +42% 等，未達門檻——較前數週（如 Astrotech 05-27 +516%）之 moonshot 密度明顯降溫。
+- Insider selling：過去 14 日未取得具備 Form 4 申報日 / 交易日 / EDGAR URL 之內部人賣壓叢集；依約束不引用過時名單，標 ✗ NOT DISCLOSED。
+- **評分邏輯**：SpaceX 史上最大 IPO 定價 + 同週 3 檔大型上市，使投機管線 / 情緒進一步升溫；惟 microcap moonshot 子訊號降溫，部分抵銷。70 → 71（+1）。
 
 ### 4. 散戶情緒：63 / 100（weight 12%）
 
-**一句話評分依據：** CNN Fear & Greed 由前次 60（貪婪）回落至 54（中性，6/03），疊加 margin debt 創高但 AAII 看空仍高於看多，散戶並非一面倒頂部式樂觀，分數自 66 降至 63。
-
-- CNN Fear & Greed：54（中性，2026-06-03；6/02 盤中曾 59）。
-- Margin Debt：FINRA 4 月 $1.30 兆創歷史新高（MoM +6.8%、YoY +53.3%）；margin debt / 美股總市值約 2.0–2.1%（以 ~$63 兆市值估算的概略比值，避免僅看絕對水位）。5 月數據尚未發布。
-- AAII（最新可得 2026-05-28 期，本週四新印未見明確更新）：看多 35.6%（低於長期均值）、中立 22.6%、看空 41.9%。
-- 社群情緒代理：WSB／Reddit 熱議仍集中 NVDA、MRVL、ASTS 等 AI 敘事股；屬科技成長題材而非廣泛迷因狂熱。
-- 註：機構情緒另列於下方，不在本維度計分。
+- CNN Fear & Greed：54（中性，2026-06-03），自 06-02 約 59 回落，情緒降溫。
+- Margin Debt：FINRA 4 月 $1.304 兆（月增 6.8%、年增 53.3%），創名目新高；margin debt / GDP 4.09 亦創新高。margin debt / 股市總市值約 **2.1%**（以 Wilshire 5000 代理約 $63 兆，近似值）——以比率而非絕對額計，槓桿仍高但未失速。
+- AAII（2026-05-28）：看多 35.6%（低於 37.5% 長均）、中性 22.6%、看空 41.9%；**看空 > 看多**，散戶調查並未呈現狂熱。
+- Social sentiment 代理：r/wallstreetbets 本週熱議集中於半導體 / AI（Broadcom 提及 24h +254%、Marvell +3232%、NVDA/ASTS 偏多），題材聚焦但屬類股而非廣泛迷因投機。
+- 註：機構情緒另列於下，未計入本維度。
+- **評分邏輯**：F&G 回落至中性、AAII 看空多於看多，調查面情緒降溫；惟 margin debt 創新高、槓桿存量未降，淨值小幅下修。66 → 63（−3）。
 
 ### 5. 貨幣與信貸環境：65 / 100（weight 20%）
 
-**一句話評分依據：** 信用利差仍極緊（HY OAS 2.72%、IG OAS 0.76%）對風險定價近乎完美，惟 WTI 急彈 +9.8% 與 10Y 微升至 4.48% 使「油→通膨→Fed 受限」鏈條邊際升溫，分數自 64 微升至 65。
-
-- Fed funds：3.50–3.75%（4/29 FOMC 連 3 次按兵不動，8–4 票，4 票異議為 1992 年以來最多；下次 6/17）。
-- HY OAS：2.72%（遠低於長期均值 ~3.94%／中位 4.53%，逼近歷史低點）。
-- IG OAS：0.76%（76 bps，5 月；極緊）。
-- 10Y 名目殖利率週變動拆解：本週 Δ 分解不可用——無日序資料（FRED/Treasury 直連 403、腳本 fetch_failed）。spot：DGS10 4.48%、DFII10 2.08%、breakeven（derived）約 2.40%。名目 10Y 相對前次 spot 約 +3 bps，但 real/breakeven Δ 歸因無法判定，不臆造。
-- Fed 資產負債表：WALCL 約 $6.7 兆（5/27），QT 持續。
-- 全球流動性交叉檢查：ECB 資產（至 5/22）大致持平、BOJ 持續收縮、Fed QT——整體偏中性偏緊；PBoC／NBS 本期未取得英文當期彙整（標 ✗ NOT DISCLOSED，僅此子項）。
-- 三角交叉訊號：見 §3。WTI 上行配合殖利率上行，支持「油→通膨預期」前段；但信用利差未走闊、refinancing 壓力未現，扳機未擊發。
+- Fed funds：上緣 DFEDTARU 3.75%（2026-06-03，FRED）持平，連續按兵不動。
+- HY OAS：BAMLH0A0HYM2 271 bps（2026-06-02，Δ −1 bp），近週期低位、信用極度寬鬆。
+- IG OAS：BAMLC0A0CM 74 bps（2026-06-02，Δ +1 bp），同處極窄。
+- 10Y 名目殖利率拆解（週變動）：ΔDGS10 −1 bps ≈ ΔDFII10 0 bps + ΔT10YIE −2 bps（FRED 各序列歷史，prior 對齊 2026-06-01）；判定 breakeven-driven 向下。任何持續性名目 10Y 上行皆增估值折現與再融資壓力；本週 10Y 微降、breakeven 錨定，意味 Fed put 在下行情境仍較可得（屬傳導 / 扳機診斷，非新增維度）。
+- WTI：$95.96（2026-06-01，FRED DCOILWTICO）/ $95.68（06-03 spot），較前次顯著走高（地緣溢價）。
+- Fed 資產負債表：WALCL $6.704 兆（2026-05-27，FRED，週度）。
+- 全球流動性交叉檢核：ECB 資產（FRED ECBASSETSW 更新至 05-22）與 BOJ 縮表趨勢為背景；**PBoC 本週無英文 aggregate financing / 流動性操作即時揭露，標 ✗ NOT DISCLOSED**——故本維度未把 PBoC 當作已觀測輸入。
+- **評分邏輯**：信用利差續窄（HY 271 / IG 74 bps）、條件寬鬆、WTI 升破 $95 為通膨側微幅疑慮，惟 10Y 微降、breakeven 回落；寬鬆續助長風險，小幅上修。64 → 65（+1）。
 
 ### 6. 結構性槓桿：73 / 100（weight 15%）
 
-**一句話評分依據：** 0DTE 佔 SPX 量已達約 60–63%（Cboe，2 月 63%）、margin debt 創高、槓桿 ETF 總規模逾 $1,700 億且加速、SKEW 136.86 顯示尾部避險升溫，惟「全球槓桿擴散訊號」本週未觸發（非 2+ 非美市場同週核准），分數自 74 微降至 73、不加 ◆。
-
-- US 槓桿 ETF AUM：TQQQ $313 億、SOXL $173 億、TSLL $65 億；槓桿 ETF 整體逾 $1,700 億並持續膨脹。
-- US 單一個股槓桿 ETF 核准／上市（近 30 日）：GraniteShares autocallable PLTR（PLA）、HOOD（AHD）5/19 上市；Direxion 5 月底推 Gold/Silver/BTC/ETH 2x（UGLD/USLV/BTCU/EVMU）——產品擴張活躍。
-- 全球槓桿產品擴散：南韓 5/22 上市 Samsung、SK hynix 單一個股 2x 槓桿／反向 ETF（6/29 將推個股週選擇權）；CSOP SK hynix 2x ETF（$53.8 億）5/8 超越 TSLL 成全球最大單一個股槓桿 ETF。台灣／日本本期無新核准披露。**僅南韓單一市場、非 2+ 市場同週，故「全球槓桿擴散訊號」本週未觸發。**
-- 0DTE：約佔 SPX 量 59–63%（2 月 63%；2020 年僅約 5%），短期博弈文化深化、負凸性放大風險。
-- 期權總量（OCC，5 月）：股票期權 8.031 億口（YoY +25.5%）、指數期權 1.226 億口（+32.8%）、ETF 期權 5.405 億口（+23.3%）——量能仍處高檔。
-- 跨資產確認：VIX 15.77（6/02，低／自滿）、期限結構穩定 contango；Cboe SKEW 136.86（6/03，尾部避險偏高）；股債相關性 2026 年轉正（Oxford Economics），削弱債券避險效能、邊際提高組合脆弱度。
-- Margin debt／市值比交叉確認：4 月 $1.30 兆、比值約 2.0–2.1%（僅作確認，不重複計分）。
-- AI 基建債務／vendor-financing：過去 30 日未見「新」大型 facility 披露（標 ✗ NOT DISCLOSED 之週度事件訊號）；背景列示——CoreWeave $85 億 DDTL（3/31，Moody's A3、Meta 合約擔保，近 12 月累計約 $280 億債股承諾）、Oracle/xAI/Meta/CoreWeave 透過 SPV 將約 $1,200 億 AI 債務移出表外。目前條款未見惡化、抵押未見減損，僅作再融資敏感度背景，不加計分。
+- US 槓桿 ETF AUM：TQQQ 約 $29B、SOXL 約 $14B、NVDL 與 TSLL 各約 $1B（總資產 $5B 級）；全體槓桿產品約 $170B，半導體 / AI 類續居前。AUM 高檔。
+- US 單股槓桿 ETF 核准 / 上市：本週掃描未見重大新單股槓桿產品上市（✓ SEARCH-VERIFIED，無顯著新案）。
+- 全球槓桿產品擴散：韓國 FSC 單股槓桿 / 反向 ETF（標的 Samsung、SK hynix，2x，5/22 上市）為近期唯一非美核准；台灣 TWSE / 日本 JPX 本週**無**單股槓桿核准。本週**無 2+ 非美市場**同週核准，**「全球槓桿擴散訊號」未觸發——本週擴散訊號未觸發**。
+- 0DTE：佔 SPX 期權約 59%（Cboe，2 月曾創 63% 紀錄），短期博弈文化持續。
+- 期權總量：OCC 5 月股票期權 803.1M（年增 25.5%）、指數期權 122.6M（年增 32.8%）、ETF 期權 540.5M，量能創高（06-02 公布）。
+- 跨資產 / 相關性：VIX 15.77（06-03，低檔、term structure contango）、SKEW 136.86（06-03，>130，尾部避險需求偏高）；股債相關性為定性確認訊號。
+- 交叉參照（僅確認）：margin debt / 股市總市值約 2.1%（源自散戶情緒，僅作確認，不重複計分）。
+- AI 基建債務 / vendor-financing：CoreWeave 完成 $8.5B 延遲提取定期貸款（DDTL 4.0，Moody's A3 / DBRS A(low)，首檔投資級 GPU-backed、綁定客戶合約，SOFR+2.25% / 固定約 5.9%，2032/3 到期）；PolarDC 北歐債（歐洲 AI 資料中心債）。規模大但屬投資級 / 合約對應、條件穩定，非 covenant-stretched / 再融資壓力。作為 AI capex 交易內部之結構槓桿背景，不另立維度、不重複計分。
+- **評分邏輯**：0DTE 約 59%、期權量能創高、槓桿 AUM 高檔、AI 基建大額新債續增，結構槓桿維持高位；惟本週「全球槓桿擴散訊號」未觸發（前次曾旗標），較前次小幅回落。74 → 73（−1）。
 
 ## 綜合分數
 
-| 維度 | 分數 | 權重 | 加權分 |
+| 維度 | 權重 | 本次分數 | 加權 |
 |---|---:|---:|---:|
-| 估值溢價 | 81 | 22% | 17.82 |
-| 市場廣度 | 45 | 13% | 5.85 |
-| 投機行為 | 71 | 18% | 12.78 |
-| 散戶情緒 | 63 | 12% | 7.56 |
-| 貨幣與信貸環境 | 65 | 20% | 13.00 |
-| 結構性槓桿 | 73 | 15% | 10.95 |
-| **合計** | | **100%** | **67.96 → 68** |
+| 估值溢價 | 22% | 81 | 17.82 |
+| 市場廣度 | 13% | 45 | 5.85 |
+| 投機行為 | 18% | 71 | 12.78 |
+| 散戶情緒 | 12% | 63 | 7.56 |
+| 貨幣與信貸環境 | 20% | 65 | 13.00 |
+| 結構性槓桿 | 15% | 73 | 10.95 |
+| **加權總分** | 100% | — | **67.96 → 68** |
 
-**綜合評分：68 / 100　　風險等級：高**（區間：低 0–39｜溫和 40–59｜警戒 60–69｜高 70–79… 本框架沿用既有分級，68 落於「高」風險帶，與前次同級。）
+**風險等級：高**（低 / 溫和 / 警戒 / **高** / 極度狂熱）。總分 68 與前次（68）持平。
 
 ## 歷史泡沫週期對比
 
-- **1997 早期建設（25%）：** 當前 AI 資本支出狂潮確有「基礎建設早期」色彩，但估值（CAPE ~42）已遠超 1997 年水準，週期位置明顯更後段，相似度低。
-- **1998 LTCM 衝擊（22%）：** 缺乏當前的系統性槓桿去化或對沖基金爆雷觸媒，信用利差極緊而非走闊，方向相反，相似度低。
-- **1999 晚期狂熱（60%）：** 最貼近。CAPE ~42 為 1999 峰值 94–95%、AI 敘事接棒網際網路、IPO 高度集中（92% 為 AI、SpaceX 擬募 $750 億）、信用利差極緊、機構 5 月現金跌破 4% 賣訊——晚週期「最後一段上漲」特徵齊備。
-- **2000/3 頂點（42%）：** 估值可比，但 2000 年 3 月已伴隨廣度急速惡化與升息末段；當前廣度仍邊際改善、Fed 處於按兵不動而非緊縮末端，尚未完全對齊頂點。
-- **2021/12 Meme 頂（48%）：** 0DTE ~60%、margin debt 創高、槓桿 ETF 擴散具高度行為相似性；惟散戶情緒（F&G 54 中性、AAII 看空>看多）未達 2021 年底全面狂熱，且利率為 3.5–3.75% 而非零利率。
+| 錨點 | 相似度 | 一句話理由 |
+|---|---:|---|
+| 1997 早期建設 | 22% | 屬建設早期、估值未達頂部；當前已是晚期，差異大。 |
+| 1998 LTCM 衝擊 | 25% | 雖有槓桿擴張共鳴，但當前無信用震盪（HY/IG 利差極窄）。 |
+| 1999 晚期狂熱 | 70% | CAPE 41.4（峰值之 94%）、AI 狂熱、IPO 爆發（SpaceX 史上最大）、margin debt 創高、領導集中、利差壓縮——最貼近。 |
+| 2000/3 頂點 | 58% | 估值近頂，但廣度仍在改善（RSP>SPY）、信用未裂，尚未進入 rollover。 |
+| 2021/12 Meme 頂 | 52% | 0DTE/期權狂熱（59%）、槓桿 ETF 普及、margin 創高；惟 AAII 看空>看多、F&G 中性，散戶調查面狂熱度不及當年。 |
 
-**詮釋（2 句）：** 本週最相似於 **1999 晚期狂熱**——估值與機構配置處於歷史性高位、AI／IPO 敘事狂熱，但廣度尚未崩壞、信用面尚未轉緊，顯示仍處「泡沫後期但計時扳機未擊發」階段。結構性槓桿以週期調整視角衡量（1999/2000 以 margin debt 與指數期權投機為代理、2021 以 0DTE 與槓桿 ETF 為代理）皆指向高位，意味一旦 AI 盈利預期或油價—利率鏈條轉向，去槓桿的反身性下行空間可觀。
+**解讀（2 句）**：本週最貼近 **1999 晚期狂熱**——估值極端、AI 與 IPO 狂熱、margin debt 與槓桿產品創高，且結構性槓桿（period-adjusted：margin debt、0DTE/期權投機、槓桿 ETF 採用）與 1999/2000 之投機特徵高度共鳴。惟廣度仍在改善、信用利差未裂、散戶調查情緒中性偏空，顯示當前更像「晚期狂熱的延續段」而非已確認的頂點（2000/3）或迷因式情緒頂（2021/12），位於週期的後段但尚未見明確 rollover 觸發。
 
 ## 機構情緒對照
 
-本次無新機構調查數據。（BofA Global FMS 5 月期已於前次 6/01 報告納入，6 月期預計約 6 月中發布；JPM 最新機構調查與年底目標價於截止前未見更新。）背景參照：5 月 FMS 現金配置 3.9%（跌破 4.0% 賣訊）、股票淨超配 +50% OW（2001 年以來最大單月跳升）、僅 4% 預期硬著陸——逆向賣訊仍懸而未解，須待 6 月期確認是否延續。AAII 僅作散戶對照，不視為機構數據。
+本次無新機構調查數據。
+
+BofA Global Fund Manager Survey（調查期 5/8–5/14）現金水位 3.9%（自 4 月 4.3% 下滑、跌破 4.0% 賣出訊號門檻）、股票配置淨 50% 超配（2001 年來最陡月增）——此讀數於前次（06-01）已納入，自前次以來**未更新**，6 月調查尚未發布，故僅作背景。極低現金 + 極端股票超配本身為反向（contrarian）訊號。AAII 僅作散戶對照（看空 41.9% > 看多 35.6%），不作機構數據。
 
 ## 本次新增訊號
 
-比較基準：vs 前次（3天前，report-2026-06-01）。
+比較基準：`vs 前次（3天前）`，前次基準 report-2026-06-01。
 
-| 維度 | 前次 | 本次 | Δ | 觸發事件 |
-|---|---:|---:|---:|---|
-| 估值溢價 | 82 | 81 | −1 | S&P 自 6/02 新高回落、9 連漲中止；CAPE 持平於高位、capex 仍上修 |
-| 市場廣度 | 45 | 45 | 0 | RSP 仍領先 SPY ~5 ppt，惟 RSI ~75、參與度偏低 |
-| 投機行為 | 70 | 71 | +1 | SpaceX 巨型 IPO 具體化（6/12、募資至多 $750 億、估值 >$2 兆）；本週無合格 microcap moonshot |
-| 散戶情緒 | 66 | 63 | −3 | CNN F&G 60→54（貪婪轉中性） |
-| 貨幣與信貸環境 | 64 | 65 | +1 | WTI +9.8%、10Y 微升至 4.48%，油—通膨鏈邊際升溫；HY/IG OAS 仍極緊 |
-| 結構性槓桿 | 74 | 73 | −1 | 0DTE ~60%、SKEW 136.86、OCC 量創高；南韓單一市場槓桿擴散，**本週擴散訊號未觸發** |
-| **總分** | **68** | **68** | **0** | 維持「高」風險帶；3 日間隔變動皆 <±10 |
-
-**本次重點：**
-1. **SpaceX 巨型 IPO 由申報轉為臨門**：最快 6/12 於 Nasdaq（SPCX）掛牌、擬募資至多 $750 億、估值逾 $2 兆——史上規模空前，典型晚週期頂部訊號（CNBC 5/22「Mega-IPO 恐示頂」）。
-2. **油價由空翻多**：WTI 5 月 −17% 後本週急彈 +9.8% 至約 $95.75，啟動 §3「油→通膨預期→Fed 受限」鏈條前段。
-3. **散戶情緒降溫**：CNN F&G 自貪婪（60）回落至中性（54）。
-4. **槓桿結構維持高位**：0DTE ~60–63%、margin debt 4 月創 $1.30 兆、槓桿 ETF 逾 $1,700 億、SKEW 136.86。
-5. **全球槓桿擴散**：南韓 5/22 上市三星／SK 海力士單一個股 2x／反向 ETF，惟為單一市場，**「全球槓桿擴散訊號」本週未觸發**（需 2+ 非美市場同週核准）。
+- **投機行為 70 → 71（+1）**：SpaceX 史上最大 IPO 定價啟動（$135/股、估值 $1.77 兆、募資上看 $750 億、6/11–6/12 SPCX 掛牌）；同週 BXDC（$17.5 億 AI 資料中心，未持資產）、Fervo（$18.9 億，史上最大再生能源 IPO）上市。
+- **散戶情緒 66 → 63（−3）**：CNN F&G 回落至 54（中性）、AAII 看空（41.9%）多於看多（35.6%）；惟 FINRA margin debt 4 月創 $1.304 兆新高（槓桿存量未降）。
+- **估值溢價 82 → 81（−1）**：S&P 500（7,553.68）、CAPE（41.44）較前次微幅回落；hyperscaler capex 仍上調撐住盈餘敘事。
+- **貨幣與信貸 64 → 65（+1）**：WTI 升破 $95（地緣溢價）、HY OAS 271 bps / IG OAS 74 bps 續窄。
+- **結構性槓桿 74 → 73（−1）**：本週無 2+ 非美市場單股槓桿核准，**「全球槓桿擴散訊號」未觸發（本週擴散訊號未觸發）**；韓國 5/22 Samsung/SK hynix 單股槓桿 ETF 與 CoreWeave $8.5B 投資級 GPU-backed DDTL 列背景。
+- **市場廣度 45 → 45（0）**、**綜合 68 → 68（0）**。本週無任何單一維度 |Δ| ≥ 10。
 
 ## 數據附錄
 
-### 來源涵蓋表（Coverage table，對應 `# Data sources` 每一 bullet，共 38 列）
+### 來源覆蓋表（Coverage table，對應 # Data sources 每一 bullet，共 38 列）
 
 | 維度 / source bullet | 預定來源與方法 | 狀態 |
 |---|---|---|
-| 估值-S&P 500 P/E 與 Shiller CAPE | multpl / GuruFocus [SEARCH] | ✓ SEARCH-VERIFIED |
-| 估值-Mag 7 加權 P/E 與 AI 龍頭 P/S | 各家估值彙整 | ✓ SEARCH-VERIFIED |
-| 估值-分析師 TP 上調拆解（best-effort） | Bloomberg/TheStreet/Benzinga [SEARCH] | ✓ SEARCH-VERIFIED |
-| 廣度-RSP vs SPY YTD | etfcentral / Bloomberg | ✓ SEARCH-VERIFIED |
-| 廣度-前十大集中度 | S&P DJI / slickcharts | ✓ SEARCH-VERIFIED |
-| 廣度-漲跌家數／新高新低 | StreetStats / MarketInOut | ✓ SEARCH-VERIFIED |
-| 散戶-CNN Fear & Greed | CNN / feargreedmeter [SEARCH] | ✓ SEARCH-VERIFIED |
-| 散戶-Margin Debt 及市值比 | FINRA / Advisor Perspectives | ✓ SEARCH-VERIFIED |
-| 散戶-AAII | AAII [SEARCH] | ✓ SEARCH-VERIFIED |
-| 散戶-社群情緒（Reddit/X） | WSB trackers / AltIndex | ✓ SEARCH-VERIFIED |
-| 機構-BofA FMS 與 JPM survey | BofA / Axios / Trustnet | ✓ SEARCH-VERIFIED |
-| 貨幣-Fed funds DFEDTARU/L | FRED 腳本失敗→WebSearch | ✓ SEARCH-VERIFIED |
-| 貨幣-HY OAS BAMLH0A0HYM2 | FRED 腳本失敗→GuruFocus | ✓ SEARCH-VERIFIED |
-| 貨幣-IG OAS BAMLC0A0CM | FRED 腳本失敗→TradingEconomics | ✓ SEARCH-VERIFIED |
-| 貨幣-10Y DGS10 | FRED 腳本失敗→TradingEconomics | ✓ SEARCH-VERIFIED |
-| 貨幣-10Y real DFII10 | FRED 腳本失敗→TradingEconomics | ✓ SEARCH-VERIFIED |
-| 貨幣-10Y breakeven T10YIE | FRED 腳本失敗→derived（DGS10−DFII10） | ✓ SEARCH-VERIFIED |
-| 貨幣-WTI DCOILWTICO | FRED 腳本失敗→TradingEconomics/CNBC | ✓ SEARCH-VERIFIED |
-| 貨幣-Fed 資產負債表 WALCL | FRED 腳本失敗→AAF/Macrotrends | ✓ SEARCH-VERIFIED |
-| 貨幣-全球央行流動性（ECB/BOJ/PBoC） | FRED ECBASSETSW / 一般搜尋（PBoC 未取得） | ✓ SEARCH-VERIFIED |
-| AI-Hyperscaler capex guidance | 財報 / CNBC / Tom's Hardware | ✓ SEARCH-VERIFIED |
-| AI-token 量成長（best-effort） | Google I/O 2026 / OpenAI | ✓ SEARCH-VERIFIED |
-| AI-OpenAI/Anthropic 營收（best-effort） | Sacra / SaaStr / RootData | ✓ SEARCH-VERIFIED |
-| AI-hyperscaler 客戶集中度（best-effort） | 財報電話會（本期無量化披露） | ✗ NOT DISCLOSED |
-| AI-compute 供需/overcapacity（best-effort）[SEARCH] | TrendForce HBM/DRAM + token 量 | ✓ SEARCH-VERIFIED |
-| 投機-+AI 改名/SPAC/IPO 暴增 | 一般搜尋 / Renaissance | ✓ SEARCH-VERIFIED |
-| 投機-IPO 熱度 | CNBC / Bloomberg / Yahoo | ✓ SEARCH-VERIFIED |
-| 投機-Microcap moonshots [SEARCH] | StockTitan / Finviz（本週無合格標的） | ✓ SEARCH-VERIFIED |
-| 投機-即將上市 AI IPO | CNBC / Bloomberg / Built In | ✓ SEARCH-VERIFIED |
-| 投機-內部人賣股 Form 4 [EDGAR] | SEC EDGAR（14 日內無明細） | ✗ NOT DISCLOSED |
-| 結構-US 槓桿 ETF AUM [SEARCH] | etf.com / Yahoo Finance | ✓ SEARCH-VERIFIED |
-| 結構-US 單一個股槓桿 ETF 核准/上市 | GlobeNewswire / ETF Express | ✓ SEARCH-VERIFIED |
-| 結構-全球槓桿產品核准（KRX/TWSE/JPX/ESMA） | Seoul Economic / Korea Herald | ✓ SEARCH-VERIFIED |
-| 結構-0DTE 期權量 | Cboe Insights | ✓ SEARCH-VERIFIED |
-| 結構-期權總量 OCC | OCC 月報（5 月） | ✓ SEARCH-VERIFIED |
-| 結構-VIX 期限結構/SKEW/股債相關 | Cboe / Macrotrends / Oxford Economics | ✓ SEARCH-VERIFIED |
-| 結構-Margin debt/市值比 交叉確認 | FINRA / dshort | ✓ SEARCH-VERIFIED |
-| 結構-AI 基建債務/vendor-financing（best-effort）[SEARCH] | CoreWeave IR / Bloomberg（30 日內無新案） | ✗ NOT DISCLOSED |
+| 估值-S&P500 P/E & Shiller CAPE | multpl / gurufocus [SEARCH] | ✓ SEARCH-VERIFIED（SV-1） |
+| 估值-Mag 7 加權 P/E & AI leader P/S | 各報價 / 估值來源 | ✓ SEARCH-VERIFIED（SV-2） |
+| 估值-分析師 TP 升評拆解（best-effort）| 賣方研報 [SEARCH] | ✓ SEARCH-VERIFIED（SV-3） |
+| 廣度-RSP vs SPY YTD | ETF 比較 [SEARCH] | ✓ SEARCH-VERIFIED（SV-4） |
+| 廣度-前十大集中度 | 指數集中度來源 [SEARCH] | ✓ SEARCH-VERIFIED（SV-5） |
+| 廣度-Advance/decline、new high/low | 市場廣度數據 | ⛔ FETCH FAILED |
+| 散戶-CNN Fear & Greed | cnn.com [SEARCH] | ✓ SEARCH-VERIFIED（SV-6） |
+| 散戶-Margin Debt（FINRA）+ 市值比 | FINRA / dshort [SEARCH] | ✓ SEARCH-VERIFIED（SV-7） |
+| 散戶-AAII 調查 | aaii.com [SEARCH] | ✓ SEARCH-VERIFIED（SV-8） |
+| 散戶-Social sentiment（Reddit/X）| WSB/cashtag 代理 [SEARCH] | ✓ SEARCH-VERIFIED（SV-9） |
+| 機構-BofA FMS & JPM survey | 月度調查 [SEARCH] | ✓ SEARCH-VERIFIED（SV-10） |
+| 貨幣-Fed funds DFEDTARU/DFEDTARL | FRED API（fetch_macro）| ✓ API |
+| 貨幣-HY OAS BAMLH0A0HYM2 | FRED API | ✓ API |
+| 貨幣-IG OAS BAMLC0A0CM | FRED API | ✓ API |
+| 貨幣-10Y DGS10 | FRED API | ✓ API |
+| 貨幣-10Y 實質 DFII10 | FRED API | ✓ API |
+| 貨幣-10Y breakeven T10YIE | FRED API | ✓ API |
+| 貨幣-WTI DCOILWTICO | FRED API | ✓ API |
+| 貨幣-Fed 資產表 WALCL | FRED API | ✓ API |
+| 貨幣-全球流動性 ECB/BOJ/PBoC | FRED/官方 [SEARCH]；PBoC best-effort | ✗ NOT DISCLOSED（PBoC；ECB/BOJ 背景見 SV-11） |
+| AI-Hyperscaler capex（MSFT/GOOGL/AMZN/META）| 財報 / 研報 [SEARCH] | ✓ SEARCH-VERIFIED（SV-12） |
+| AI-Token volume growth（best-effort）| 廠商季度揭露 | ✗ NOT DISCLOSED |
+| AI-OpenAI/Anthropic 年化營收（best-effort）| 新聞揭露 [SEARCH] | ✓ SEARCH-VERIFIED（SV-13） |
+| AI-Hyperscaler AI 客戶集中度（best-effort）| 財報電話會 | ✗ NOT DISCLOSED |
+| AI-算力供需 / 過剩風險（best-effort）| GPU 租金/HBM/交期 [SEARCH] | ✗ NOT DISCLOSED |
+| 投機-+AI rename / SPAC / 無營收 IPO 潮 | 新聞 [SEARCH]（7日）| ✓ SEARCH-VERIFIED（SV-14） |
+| 投機-IPO 熱度（週數/首日/無營收占比）| IPO 行事曆 [SEARCH] | ✓ SEARCH-VERIFIED（SV-15） |
+| 投機-Microcap thematic moonshots | Finviz/movers [SEARCH] | ✓ SEARCH-VERIFIED（SV-16，無符合者） |
+| 投機-Upcoming AI IPOs（OpenAI/Anthropic/xAI/SpaceX）| S-1/具名報導 [SEARCH] | ✓ SEARCH-VERIFIED（SV-17） |
+| 投機-Insider selling Form 4 [SEC EDGAR] | EDGAR Form 4（14日）| ✗ NOT DISCLOSED |
+| 結構-US 槓桿 ETF AUM | etf.com/ETFGI [SEARCH] | ✓ SEARCH-VERIFIED（SV-18） |
+| 結構-US 單股槓桿 ETF 核准/上市 | SEC EDGAR / ETF.com [SEARCH] | ✓ SEARCH-VERIFIED（SV-19，無顯著新案） |
+| 結構-全球槓桿產品核准（KRX/TWSE/JPX/ESMA）| 各監管 [SEARCH] | ✓ SEARCH-VERIFIED（SV-20） |
+| 結構-0DTE 期權量 | Cboe [SEARCH] | ✓ SEARCH-VERIFIED（SV-21） |
+| 結構-期權總量（OCC 月報）| OCC [SEARCH] | ✓ SEARCH-VERIFIED（SV-22） |
+| 結構-VIX term structure / SKEW / 股債相關 | Cboe [SEARCH] | ✓ SEARCH-VERIFIED（SV-23） |
+| 結構-margin debt/市值比 交叉參照（僅確認）| FINRA/FRED | ✓ SEARCH-VERIFIED（SV-7 同源） |
+| 結構-AI 基建債務 / vendor-financing（best-effort）| 新聞/發行 [SEARCH] | ✓ SEARCH-VERIFIED（SV-24） |
 
-（38 列＝`# Data sources` 38 bullet；✗ NOT DISCLOSED 三項皆為 Fetch protocol best-effort／Form 4 明確允許項，無 required 源以 ✗ 掩蓋。）
+### SEARCH-VERIFIED 追蹤（query / URL / 發布者 / 發布或資料日期 / 抓取時間）
 
-### SEARCH-VERIFIED 追溯與原始數據
+抓取時間統一為 2026-06-04 約 16:30（Asia/Taipei）批次擷取。
 
-所有數值經 WebSearch 取得；本執行環境 Bash/Python 直連外網（含 FRED/Treasury/EIA/example.com）一律回 403，故 macro 序列改由 WebSearch 取 spot（無日序、Δ 分解不可用）。檢索 timestamp 均為 2026-06-04（Asia/Taipei）。
+- **SV-1** CAPE/PE：query「Shiller CAPE ratio S&P 500 PE ratio multpl June 2026」｜ https://www.gurufocus.com/economic_indicators/56/sp-500-shiller-cape-ratio ｜ GuruFocus ｜ 資料日 2026-06-01（CAPE 41.44）。
+- **SV-2** Mag 7 P/E：query 同上 + 前次基準；前向 P/E ~28×、Mag 7 高位 ｜ multpl / 前次報告交叉 ｜ 資料日 2026-06，水位快照。
+- **SV-3** TP 升評：query「Morgan Stanley Goldman Sachs price target raise Nvidia TSMC May 2026 upgrade」｜ https://www.thestreet.com/investing/stocks/goldman-sachs-stuns-with-taiwan-semiconductor-stock-price-target ｜ TheStreet ｜ 發布 2026-05（NVDA MS $285/288、Jefferies $300；TSMC Goldman $370–375）。
+- **SV-4** RSP/SPY：query「RSP equal weight vs SPY cap weight YTD 2026 divergence」｜ https://finance.yahoo.com/quote/RSP/ ｜ Yahoo Finance / 24-7 Wall St ｜ 資料日 2026-06（RSP YTD ~9.68%、超前 ~5pp）。
+- **SV-5** 集中度：query「S&P 500 top 10 concentration weight percent 2026」｜ https://www.pionline.com/data-rankings/chart-of-the-day/pi-sp500-index-concentration/ ｜ P&I / AhaSignals ｜ 資料日 2026-04（35.59%）。
+- **SV-6** F&G：query「CNN Fear and Greed Index today June 2026」｜ https://www.cnn.com/markets/fear-and-greed ｜ CNN ｜ 資料日 2026-06-03（54 中性）。
+- **SV-7** Margin debt：query「FINRA margin debt latest level April 2026 record」｜ https://www.advisorperspectives.com/dshort/updates/2026/05/20/margin-debt-up-6-8-in-april-to-a-record-high ｜ Advisor Perspectives/dshort ｜ 資料日 2026-04（$1.304T、margin/GDP 4.09）。
+- **SV-8** AAII：query「AAII investor sentiment survey bullish bearish June 2026」｜ https://www.aaii.com/sentimentsurvey ｜ AAII ｜ 資料日 2026-05-28（多 35.6 / 中 22.6 / 空 41.9）。
+- **SV-9** Social：query「wallstreetbets reddit trending stocks June 2026」｜ https://tradestie.com/apps/reddit/wallstreetbets/ ｜ Tradestie/AltIndex ｜ 資料日 2026-06（AVGO 提及 +254%、MRVL +3232%）。
+- **SV-10** BofA FMS：query「BofA Global Fund Manager Survey cash level June 2026」｜ https://www.axios.com/2026/05/20/fund-managers-stocks-bofa ｜ Axios/Trustnet ｜ 發布 2026-05-20（現金 3.9%、調查期 5/8–5/14）。
+- **SV-11** ECB/BOJ：query「ECB BOJ balance sheet June 2026 PBoC liquidity」｜ https://fred.stlouisfed.org/series/ECBASSETSW ｜ FRED/ECB ｜ ECB 資產更新至 2026-05-22；PBoC 無即時揭露（✗）。
+- **SV-12** Capex：query「hyperscaler capex guidance 2026 Microsoft Google Amazon Meta」｜ https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion ｜ Tom's Hardware/CNBC ｜ 發布 2026（MSFT $190B/AMZN $200B/GOOGL $175–185B/META $125–145B）。
+- **SV-13** OpenAI/Anthropic 營收：query「SpaceX OpenAI Anthropic IPO 2026 filing valuation」｜ https://www.indmoney.com/blog/us-stocks/spacex-openai-anthropic-ipo-explained ｜ 多源/Reuters/CNBC ｜ 發布 2026-06-03（OpenAI >$20B、Anthropic run-rate ~$47B）。
+- **SV-14** +AI rename：query「company changes name AI ticker rename 2026 SPAC」｜ https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html ｜ CNBC ｜ 發布 2026-05（SpaceX 吸收 xAI→SpaceXAI）。
+- **SV-15** IPO 熱度：query「IPO this week June 2026 first day pop debut no revenue」｜ https://finance.yahoo.com/calendar/ipo/ ｜ Yahoo/IPOScoop ｜ 資料日 2026-06（Cerebras、BXDC、Fervo、SpaceX 6/12）。
+- **SV-16** Moonshots：query「biggest stock gainers June 2 2026 ... microcap」+「finviz ... up 150% one day June 2026」｜ https://www.stocktitan.net/rankings/stock-gains-monthly/2026/june ｜ StockTitan ｜ 資料日 2026-06，掃描結果**無**符合 ≥100% 單日 + ≥2 題材 + 弱基本面者。
+- **SV-17** Upcoming AI IPO：query「SpaceX OpenAI Anthropic IPO 2026 filing valuation」｜ https://fortune.com/2026/06/03/spacex-ipo-share-price-index-funds-valuation-public/ ｜ Fortune ｜ 發布 2026-06-03（SpaceX 555.6M 股 @ $135、$1.77T、6/12 掛牌）。
+- **SV-18** 槓桿 AUM：query「leveraged ETF AUM record NVDL TSLL TQQQ SOXL 2026」｜ https://etfdb.com/etf/TQQQ/ ｜ ETF Database/etf.com ｜ 資料日 2026（TQQQ ~$29B、SOXL ~$14B、全體 ~$170B）。
+- **SV-19** US 單股槓桿核准：query 同 SV-18 + ETF.com 新發feed｜ https://www.etf.com/ ｜ etf.com ｜ 資料日 2026-06，本週無顯著新單股槓桿上市。
+- **SV-20** 全球槓桿擴散：query「Korea Taiwan Japan single-stock leveraged ETF approval May June 2026」｜ https://www.koreaherald.com/article/10722289 ｜ Korea Herald/SRP ｜ 發布 2026-04～05（韓國 Samsung/SK hynix 2x，5/22 上市；台/日本週無單股槓桿）。
+- **SV-21** 0DTE：query「0DTE options percentage SPX volume 2026」｜ https://www.cboe.com/insights/posts/the-state-of-the-options-industry-2025/ ｜ Cboe ｜ 資料日 2026-early（~59% SPX）。
+- **SV-22** OCC：query「OCC total options volume May 2026 monthly」｜ https://www.theocc.com/market-data/market-data-reports/volume-and-open-interest/monthly-weekly-volume-statistics ｜ OCC ｜ 公布 2026-06-02（股票 803.1M +25.5% YoY、指數 122.6M +32.8%）。
+- **SV-23** VIX/SKEW：query「VIX index level CBOE SKEW June 3 2026」｜ https://finance.yahoo.com/quote/%5EVIX/ ＋ https://www.cboe.com/us/indices/dashboard/skew/ ｜ Cboe/Yahoo ｜ 資料日 2026-06-03（VIX 15.77、SKEW 136.86）。
+- **SV-24** AI 基建債務：query「CoreWeave Crusoe AI data center debt private credit ABS financing May 2026」｜ https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-Landmark-8-5-Billion-Financing-Facility ｜ CoreWeave/PitchBook ｜ 發布 2026（$8.5B DDTL 4.0，A3/A(low)，SOFR+2.25%/5.9%，2032/3）。
 
-| 指標 | 數值 | 來源／URL | 發布／資料日期 | 狀態 |
-|---|---|---|---|---|
-| S&P 500 收盤 | 7,553.68（−0.74%） | CNBC https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html | 2026-06-03 | ✓ SEARCH-VERIFIED |
-| S&P 500 盤中新高 | >7,609.78 | TheStreet stock-market-today | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| Shiller CAPE | 41.44（GuruFocus）／42.53（multpl） | gurufocus.com/economic_indicators/56 ; multpl.com/shiller-pe | 2026-06-01 / 當前 | ✓ SEARCH-VERIFIED |
-| S&P 500 trailing P/E | 27.42（GuruFocus）／~28.5 | gurufocus.com/economic_indicators/57 | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| S&P 500 forward P/E | ~21.8 | macromicro / ISABELNET | 2026-05 | ✓ SEARCH-VERIFIED |
-| Mag 7 P/E（NVDA fwd / MSFT fwd / GOOGL fwd） | ~47 / ~24.5 / ~17.4 | Motley Fool / Nasdaq | 2026-05 | ✓ SEARCH-VERIFIED |
-| MS NVDA 目標價 | $288（~22× CY27 EPS $13.08） | Investing.com / TheStreet | 2026-05（近 14 日內） | ✓ SEARCH-VERIFIED |
-| Marvell 單日漲幅 | +32.5% | CNBC 2026/06/02 | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| RSP YTD 總報酬 / 領先 SPY | +9.7% / ~+5 ppt | etfcentral / 247wallst | 2026 YTD | ✓ SEARCH-VERIFIED |
-| 前十大集中度 | ~35.6%（4 月）至 >37% | S&P DJI / pionline | 2026-04~05 | ✓ SEARCH-VERIFIED |
-| 成分站上 50DMA / RSI | 52.2% / 75.04 | StreetStats | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| CNN Fear & Greed | 54（中性；6/02 盤中 59） | CNN / feargreedmeter.com | 2026-06-03 | ✓ SEARCH-VERIFIED |
-| FINRA margin debt | $1.30 兆（MoM +6.8%、YoY +53.3%） | Advisor Perspectives dshort | 2026-04（5/20 發布） | ✓ SEARCH-VERIFIED |
-| margin debt / 市值比 | ~2.0–2.1%（概估） | 自算（margin/~$63T 市值） | 2026-04 | ✓ SEARCH-VERIFIED |
-| AAII（多/中/空） | 35.6% / 22.6% / 41.9% | aaii.com/sentimentsurvey | 2026-05-28（本週新印未明確更新） | ✓ SEARCH-VERIFIED |
-| WSB 熱門股 | NVDA, MRVL, ASTS | AltIndex / tradestie | 2026-06-02~03 | ✓ SEARCH-VERIFIED |
-| BofA FMS 現金/股票超配（5 月期） | 3.9% / +50% OW | Axios / Trustnet | 2026-05（5/20） | ✓ SEARCH-VERIFIED |
-| Fed funds 目標區間 | 3.50–3.75%（8–4 票） | Fed FOMC / fedprimerate | 2026-04-29 | ✓ SEARCH-VERIFIED |
-| HY OAS（BAMLH0A0HYM2） | 2.72% | GuruFocus 5735 | 2026-06（5 月值） | ✓ SEARCH-VERIFIED |
-| IG OAS（BAMLC0A0CM） | 0.76%（76 bps） | TradingEconomics | 2026-05 | ✓ SEARCH-VERIFIED |
-| 10Y DGS10 | 4.48% | TradingEconomics / CNBC US10Y | 2026-06-04 | ✓ SEARCH-VERIFIED |
-| 10Y real DFII10 | 2.08% | TradingEconomics 10Y TIPS | 2026-06-03 | ✓ SEARCH-VERIFIED |
-| 10Y breakeven T10YIE | ~2.40%（derived）；FRED 直接最近 2.5%＠5/08 | 自算 DGS10−DFII10 / FRED T10YIE | 2026-06-03 / 2026-05-08 | ✓ SEARCH-VERIFIED |
-| WTI 原油 | ~$95.75 /bbl | TradingEconomics / CNBC @CL.1 | 2026-06-03 | ✓ SEARCH-VERIFIED |
-| Fed 資產負債表 WALCL | ~$6.7 兆 | AAF / Macrotrends | 2026-05-27 | ✓ SEARCH-VERIFIED |
-| ECB 資產 / BOJ | 大致持平（至 5/22）/ 持續收縮 | FRED ECBASSETSW / 一般搜尋 | 2026-05-22 | ✓ SEARCH-VERIFIED |
-| PBoC 當期英文彙整 | 未取得 | — | — | ✗ NOT DISCLOSED（僅此子項） |
-| Hyperscaler 2026 capex 合計 | ~$7,000–7,250 億（YoY +~77%） | Tom's Hardware / Statista | 2026-Q1 財報季 | ✓ SEARCH-VERIFIED |
-| Meta capex 上修 | $1,150–1,350 億 → $1,250–1,450 億 | CreditSights / 財報 | 2026-Q1 | ✓ SEARCH-VERIFIED |
-| Alphabet / Amazon 2026 capex | $1,800–1,900 億 / ~$2,000 億 | Tom's Hardware / CNBC | 2026-Q1 | ✓ SEARCH-VERIFIED |
-| Google 月處理 token | 3.2 quadrillion（YoY ~7×） | Google I/O 2026 keynote | 2026-05-19 | ✓ SEARCH-VERIFIED |
-| OpenAI / Anthropic 年化營收 | ~$250 億（2 月）/ ~$300 億（4 月） | Sacra / SaaStr / RootData | 2026-02~04 | ✓ SEARCH-VERIFIED |
-| HBM/DRAM 價格 | 偏緊；HBM4 mid-2026 ~+30% | TrendForce 20260602 | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| GPU 租賃利用率 | 未取得直接證據 | — | — | ✗ NOT DISCLOSED（AI overcapacity 子項） |
-| SpaceX IPO | Nasdaq SPCX 最快 6/12、募資至多 $750 億、估值 >$2 兆 | CNBC / Bloomberg / Yahoo | 2026-05-22~06-03 | ✓ SEARCH-VERIFIED |
-| IPO 管線 AI 佔比 | ~92% | Yahoo / Built In | 2026-05 | ✓ SEARCH-VERIFIED |
-| Microcap moonshot（本週） | 無合格標的（VIDA +53%、LEGN +42% 未達門檻） | StockTitan rankings | 2026-06 | ✓ SEARCH-VERIFIED |
-| 內部人 Form 4 群聚（14 日） | 無明細 | SEC EDGAR | — | ✗ NOT DISCLOSED |
-| 槓桿 ETF AUM（TQQQ/SOXL/TSLL） | $313 億 / $173 億 / $65 億；整體 >$1,700 億 | etf.com / Yahoo | 2026-05~06 | ✓ SEARCH-VERIFIED |
-| US 單一個股槓桿 ETF 新上市 | GraniteShares PLA/AHD（5/19）、Direxion 2x 套組（5 月底） | GlobeNewswire / ETF Express | 2026-05-19~28 | ✓ SEARCH-VERIFIED |
-| 南韓單一個股槓桿/反向 ETF | 三星/SK 海力士 2x，5/22 上市 | Seoul Economic / Korea Herald | 2026-05-22 | ✓ SEARCH-VERIFIED |
-| CSOP SK hynix 2x ETF | $53.8 億（全球最大單一個股槓桿 ETF） | Seoul Economic / TradingKey | 2026-05-08 | ✓ SEARCH-VERIFIED |
-| 0DTE 佔 SPX 量 | ~59–63%（2 月 63%） | Cboe Insights | 2026-02~ | ✓ SEARCH-VERIFIED |
-| OCC 5 月期權量 | 股票 8.031 億／指數 1.226 億／ETF 5.405 億口 | OCC（Securities Finance Times） | 2026-05（6/02 發布） | ✓ SEARCH-VERIFIED |
-| VIX | 15.77 | Macrotrends / FRED VIXCLS | 2026-06-02 | ✓ SEARCH-VERIFIED |
-| Cboe SKEW | 136.86 | Cboe / Yahoo ^SKEW | 2026-06-03 | ✓ SEARCH-VERIFIED |
-| 股債相關性 | 2026 轉正 | Oxford Economics | 2026 | ✓ SEARCH-VERIFIED |
-| CoreWeave $8.5B DDTL（背景） | Moody's A3、Meta 合約擔保 | CoreWeave IR / Bloomberg | 2026-03-31 | ✗ NOT DISCLOSED（30 日內無新案；背景） |
-| AI 表外 SPV 債務（背景） | ~$1,200 億（Oracle/xAI/Meta/CoreWeave） | Cryptopolitan / Quartz | 2026（持續） | ✗ NOT DISCLOSED（30 日內無新案；背景） |
+### 宏觀原始數據（fetch_macro.py，FRED API；key 已遮蔽）
 
-**附註：** FRED API key 與 EIA API key 已於環境變數存在，但本執行環境對 FRED/Treasury/EIA 主機之直連（urllib + UA）回 HTTP 403（WAF），`scripts/fetch_macro.py` 全序列 `fetch_failed`、`decomposition unavailable_no_daily_history`，故 10Y 週變動 Δ 分解本週不可用，所有 macro 數值改以 WebSearch spot 呈現，未臆造任何 Δ。報告未輸出任何金鑰或含 `api_key=` 之 URL。
+| 序列 | 來源 | 最新值 | 最新日 | 前次（06-01）| Δ |
+|---|---|---:|---|---:|---:|
+| DGS10（10Y 名目）| FRED API (series_id=DGS10) | 4.46% | 2026-06-02 | 4.47% | −1 bps |
+| DFII10（10Y 實質）| FRED API (series_id=DFII10) | 2.07% | 2026-06-02 | 2.07% | 0 bps |
+| T10YIE（10Y breakeven）| FRED API (series_id=T10YIE) | 2.38% | 2026-06-03 | 2.40% | −2 bps |
+| BAMLH0A0HYM2（HY OAS）| FRED API | 2.71%（271 bps）| 2026-06-02 | 2.72% | −1 bps |
+| BAMLC0A0CM（IG OAS）| FRED API | 0.74%（74 bps）| 2026-06-02 | 0.73% | +1 bps |
+| DFEDTARU（Fed funds 上緣）| FRED API | 3.75% | 2026-06-03 | 3.75% | 0 bps |
+| WALCL（Fed 資產表）| FRED API | $6.704 兆 | 2026-05-27 | — | 週度 |
+| DCOILWTICO（WTI）| FRED API | $95.96 | 2026-06-01 | — | spot |
+
+10Y 拆解（script `decomposition`）：ΔDGS10 −1 bps ≈ ΔDFII10 0 bps + ΔT10YIE −2 bps；driver = breakeven。FRED API key 已遮蔽，未於報告任何處輸出。
+
+### 市場 / 情緒原始數據
+
+| 指標 | 值 | 日期 | 來源 |
+|---|---|---|---|
+| S&P 500 | 7,553.68（06-02 曾破 7,600 創高）| 2026-06-03 | TheStreet / Yahoo |
+| Shiller CAPE | 41.44 | 2026-06 | GuruFocus |
+| CNN Fear & Greed | 54（中性）| 2026-06-03 | CNN |
+| AAII（多/中/空）| 35.6 / 22.6 / 41.9 | 2026-05-28 | AAII |
+| FINRA Margin Debt | $1.304 兆（+6.8% MoM；margin/GDP 4.09）| 2026-04 | FINRA / dshort |
+| VIX | 15.77 | 2026-06-03 | Cboe / Yahoo |
+| SKEW | 136.86 | 2026-06-03 | Cboe |
+| 0DTE 佔 SPX | ~59% | 2026 | Cboe |
+| OCC 股票/指數期權 | 803.1M / 122.6M | 2026-05 | OCC |
+| 槓桿 ETF AUM | TQQQ ~$29B、SOXL ~$14B、全體 ~$170B | 2026 | ETF Database |
+| WTI spot | $95.68 | 2026-06-03 | TradingEconomics |
 
 ## 本次分數存檔
+
 ```json
 {
   "date": "2026-06-04",
