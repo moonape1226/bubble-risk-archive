@@ -248,6 +248,35 @@ def page(title, nav_latest, hero, body, home, scripts=""):
     )
 
 
+LIST_RE = re.compile(r"^\s*([-*+]|\d+\.)\s+\S")
+FENCE_RE = re.compile(r"^\s*(```|~~~)")
+
+
+def normalize_lists(md):
+    """Insert a blank line before a list that directly follows a paragraph line.
+
+    Python-Markdown (unlike GitHub-flavoured Markdown, the blob-view renderer)
+    only recognises a list when a blank line precedes it. report.md has lead-ins
+    like ``扳機鏈：`` immediately followed by ``- `` items, which would otherwise
+    collapse into a single run-on <p>. report.md itself is untouched.
+    """
+    out = []
+    in_fence = False
+    for line in md.split("\n"):
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            out.append(line)
+            continue
+        if not in_fence and LIST_RE.match(line) and out:
+            prev = out[-1]
+            # fire only on the paragraph→list boundary: previous line is a
+            # non-blank, non-indented, non-list line (so we never split a list).
+            if prev.strip() and not LIST_RE.match(prev) and not prev.startswith((" ", "\t")):
+                out.append("")
+        out.append(line)
+    return "\n".join(out)
+
+
 def render_md(text):
     return markdown.markdown(text, extensions=["tables", "fenced_code"])
 
@@ -406,7 +435,7 @@ def load_runs():
 def render_report_body(md):
     """Render §2 onward as dark prose: drop the intro and the §1 ASCII table
     (both surfaced by the hero + score cards), collapse the data appendix."""
-    parts = re.split(r"(?m)^(?=## )", md)
+    parts = re.split(r"(?m)^(?=## )", normalize_lists(md))
     out = []
     for sec in parts[1:]:  # parts[0] is the intro (H1 + metadata + 總評)
         heading = sec.splitlines()[0]
