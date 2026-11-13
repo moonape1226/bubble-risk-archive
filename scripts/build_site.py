@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """Build the GitHub Pages site for bubble-risk-archive.
 
-Scans report-YYYY-MM-DD/ folders (score.json + report.md) and renders a dark
+Scans report-YYYY-MM-DD/ folders (report.md plus forecast.json, or legacy
+score.json; forecast.json wins when both exist) and renders a dark
 dashboard: a home page with a tier-tinted hero, a six-dimension score-card
 grid, a score-trend chart (Chart.js) and a past-reports table, plus one
-standalone page per report. Output goes to _site/.
+standalone page per report. Forecast folders get a yes/no hero and a forecast
+timeline instead of scores. Output goes to _site/.
 
 Usage: python3 scripts/build_site.py
 Requires: pip install markdown
 """
+import html as htmllib
 import json
 import re
 import sys
@@ -408,36 +411,146 @@ def score_cards(score, prev):
     return f'<div class="cards">{"".join(cards)}</div>'
 
 
+# Only emitted on pages that show a forecast, so legacy-only pages stay byte-identical.
+FORECAST_CSS = (
+    "<style>"
+    ".hero .answer-big { font-size: 3.4rem; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }"
+    ".ans-yes { color: #e5484d; } .ans-no { color: #3fb950; } .ans-unknown { color: var(--muted); }"
+    "</style>"
+)
+
+
+def esc(v):
+    return htmllib.escape(str(v), quote=True)
+
+
+def answer_label(a):
+    return {"yes": "YES", "no": "NO"}.get(a, "—")
+
+
+def answer_class(a):
+    return {"yes": "ans-yes", "no": "ans-no"}.get(a, "ans-unknown")
+
+
+def answer_span(a):
+    return f'<span class="{answer_class(a)}"><b>{answer_label(a)}</b></span>'
+
+
+def r1_text(f):
+    v = f.get("r1_drawdown_pct")
+    if isinstance(v, bool) or not isinstance(v, (int, float)):
+        return "—"
+    return f"NASDAQ-100 距 52 週高點回撤 {v:.1f}%（R1 門檻 25%）"
+
+
+def resolution_text(f):
+    res = f.get("resolution")
+    return answer_span(res) if res in ("yes", "no") else "待解析"
+
+
+def flip_text(f):
+    prev = f.get("prior_answer")
+    if prev not in ("yes", "no"):
+        return "首次結論（無前次答案）"
+    pd = f.get("prior_date")
+    ref = f"（{esc(pd)}）" if pd else ""
+    if prev == f.get("answer"):
+        return f"與前次{ref}相同：{answer_label(prev)}"
+    return f"較前次{ref}翻轉：{answer_label(prev)} → {answer_label(f.get('answer'))}"
+
+
+def forecast_hero(f, report_md):
+    ans = f.get("answer")
+    date = esc(f.get("date", ""))
+    iso_week = f.get("iso_week", "")
+    weekday = f.get("weekday", "")
+    horizon = f.get("horizon_end")
+    window = f"{date} → {esc(horizon)}" if horizon else date
+    eyebrow = f"市場泡沫風險 · {esc(iso_week)}" if iso_week else "市場泡沫風險"
+    subtitle = " · ".join(esc(x) for x in [f.get("date", ""), weekday] if x)
+    chips = (
+        f'<span class="chip">觀察視窗 <b>{window}</b></span>'
+        f'<span class="chip">{esc(r1_text(f))}</span>'
+        f'<span class="chip">{flip_text(f)}</span>'
+    )
+    tint = (
+        "background: radial-gradient(120% 120% at 0% 0%, "
+        f'{"#e5484d" if ans == "yes" else "#2ea043" if ans == "no" else TIER_UNKNOWN}22 0%, '
+        "rgba(0,0,0,0) 55%), var(--bg);"
+    )
+    return (
+        FORECAST_CSS
+        + f'<div class="hero" style="{tint}"><div class="wrap">'
+        f'<p class="eyebrow">{eyebrow}</p>'
+        "<h1>自報告日起 182 天內，AI 泡沫是否破裂？</h1>"
+        '<div class="score-row">'
+        f'<span class="score-max">結論：</span>'
+        f'<span class="answer-big {answer_class(ans)}">{answer_label(ans)}</span>'
+        f'<span class="score-max">{subtitle}</span>'
+        "</div>"
+        f'<div class="chips">{chips}</div>'
+        "</div></div>"
+    )
+
+
+def forecast_timeline(runs):
+    rows = []
+    for r in reversed(runs):
+        f = r["forecast"]
+        rows.append(
+            "<tr>"
+            f'<td><a href="{r["dir"]}/">{r["date"]}</a></td>'
+            f"<td>{answer_span(f.get('answer'))}</td>"
+            f"<td>{esc(f.get('horizon_end') or '—')}</td>"
+            f"<td>{resolution_text(f)}</td>"
+            "</tr>"
+        )
+    return (
+        '<div class="table-scroll"><table class="history"><thead><tr>'
+        "<th>日期</th><th>結論</th><th>視窗截止</th><th>解析</th>"
+        "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
+    )
+
+
 def load_runs():
     runs = []
     for d in sorted(ROOT.glob("report-????-??-??")):
         if not re.fullmatch(r"report-\d{4}-\d{2}-\d{2}", d.name):
             continue
-        score_f, report_f = d / "score.json", d / "report.md"
-        if not (score_f.is_file() and report_f.is_file()):
+        forecast_f, score_f, report_f = d / "forecast.json", d / "score.json", d / "report.md"
+        kind, data_f = ("forecast", forecast_f) if forecast_f.is_file() else ("legacy", score_f)
+        if not (data_f.is_file() and report_f.is_file()):
             print(f"skip partial folder: {d.name}", file=sys.stderr)
             continue
         try:
-            score = json.loads(score_f.read_text(encoding="utf-8"))
+            data = json.loads(data_f.read_text(encoding="utf-8"))
         except json.JSONDecodeError as e:
-            print(f"skip unparsable score.json: {d.name} ({e})", file=sys.stderr)
+            print(f"skip unparsable {data_f.name}: {d.name} ({e})", file=sys.stderr)
+            continue
+        if kind == "forecast" and not isinstance(data, dict):
+            print(f"skip malformed forecast.json: {d.name} (not an object)", file=sys.stderr)
             continue
         runs.append({
             "dir": d.name,
             "date": d.name.removeprefix("report-"),
-            "score": score,
+            "kind": kind,
+            "score": data if kind == "legacy" else None,
+            "forecast": data if kind == "forecast" else None,
             "report_md": report_f.read_text(encoding="utf-8"),
         })
     runs.sort(key=lambda r: r["date"])
     return runs
 
 
-def render_report_body(md):
+def render_report_body(md, keep_intro=False):
     """Render §2 onward as dark prose: drop the intro and the §1 ASCII table
     (both surfaced by the hero + score cards), collapse the data appendix."""
     parts = re.split(r"(?m)^(?=## )", normalize_lists(md))
     out = []
-    for sec in parts[1:]:  # parts[0] is the intro (H1 + metadata + 總評)
+    # parts[0] is the intro (H1 + metadata + 總評); forecast pages keep it
+    for sec in (parts if keep_intro else parts[1:]):
+        if not sec.strip():
+            continue
         heading = sec.splitlines()[0]
         if "§1 六維度風險條圖" in heading:
             continue
@@ -508,7 +621,20 @@ def chart_html(runs):
 def history_table(runs):
     rows = []
     prev_total = None
+    has_forecast = any(r["kind"] == "forecast" for r in runs)
     for r in runs:  # ascending; compute delta then reverse for display
+        if r["kind"] == "forecast":
+            f = r["forecast"]
+            rows.append(
+                "<tr>"
+                f'<td><a href="{r["dir"]}/">{r["date"]}</a></td>'
+                '<td class="num">—</td><td class="num">—</td><td>—</td><td>—</td>'
+                f"<td>{answer_span(f.get('answer'))}</td>"
+                f"<td>{esc(f.get('horizon_end') or '—')}</td>"
+                f"<td>{resolution_text(f)}</td>"
+                "</tr>"
+            )
+            continue
         s = r["score"]
         total = s.get("total")
         delta = "—"
@@ -524,12 +650,15 @@ def history_table(runs):
             f'<td class="num">{delta}</td>'
             f"<td>{tier_badge(s.get('tier'))}</td>"
             f"<td>{s.get('regime', '—')}</td>"
-            "</tr>"
+            + ("<td>—</td><td>—</td><td>—</td>" if has_forecast else "")
+            + "</tr>"
         )
     rows.reverse()
+    extra = "<th>結論</th><th>視窗截止</th><th>解析</th>" if has_forecast else ""
     return (
         '<div class="table-scroll"><table class="history"><thead><tr>'
         '<th>日期</th><th class="num">加權總分</th><th class="num">Δ</th><th>風險等級</th><th>§3 格局</th>'
+        + extra +
         "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>"
     )
 
@@ -540,24 +669,35 @@ def main():
         print("no complete report folders found", file=sys.stderr)
         sys.exit(1)
     latest = runs[-1]
+    legacy = [r for r in runs if r["kind"] == "legacy"]
+    forecasts = [r for r in runs if r["kind"] == "forecast"]
 
     OUT.mkdir(exist_ok=True)
 
     # Per-report pages
-    for i, r in enumerate(runs):
-        prev = runs[i - 1]["score"] if i > 0 else None
-        body = (
-            score_cards(r["score"], prev)
-            + f'<article class="report">{render_report_body(r["report_md"])}</article>'
-            + '<a class="back" href="../">← 回首頁</a>'
-        )
+    prev_legacy = None
+    for r in runs:
+        if r["kind"] == "forecast":
+            body = (
+                f'<article class="report">{render_report_body(r["report_md"], keep_intro=True)}</article>'
+                + '<a class="back" href="../">← 回首頁</a>'
+            )
+            hero_html = forecast_hero(r["forecast"], r["report_md"])
+        else:
+            body = (
+                score_cards(r["score"], prev_legacy)
+                + f'<article class="report">{render_report_body(r["report_md"])}</article>'
+                + '<a class="back" href="../">← 回首頁</a>'
+            )
+            hero_html = hero(r["score"], r["report_md"])
+            prev_legacy = r["score"]
         d = OUT / r["dir"]
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(
             page(
                 f'{r["date"]} 市場泡沫風險評估報告',
                 f'報告日 {r["date"]}',
-                hero(r["score"], r["report_md"]),
+                hero_html,
                 body,
                 "../",
             ),
@@ -565,22 +705,35 @@ def main():
         )
 
     # Home page (dashboard only; full report lives on its own page)
-    s = latest["score"]
-    prev = runs[-2]["score"] if len(runs) > 1 else None
-    chart, chart_script = chart_html(runs)
-    body = (
-        '<section class="block"><h2>六維度評分</h2>'
-        + score_cards(s, prev)
-        + f'<a class="readmore" href="{latest["dir"]}/">閱讀最新完整報告（{latest["date"]}） →</a>'
-        + "</section>"
-        + '<section class="block"><h2>歷史分數趨勢</h2>' + chart + "</section>"
-        + '<section class="block"><h2>過往報告</h2>' + history_table(runs) + "</section>"
-    )
+    readmore = f'<a class="readmore" href="{latest["dir"]}/">閱讀最新完整報告（{latest["date"]}） →</a>'
+    body = ""
+    chart_script = ""
+    if latest["kind"] == "forecast":
+        home_hero = forecast_hero(latest["forecast"], latest["report_md"])
+        body += '<section class="block"><h2>預測時間線</h2>' + forecast_timeline(forecasts) + readmore + "</section>"
+        if legacy:
+            s = legacy[-1]["score"]
+            prev = legacy[-2]["score"] if len(legacy) > 1 else None
+            body += (
+                f'<section class="block"><h2>六維度評分（舊版報告 {legacy[-1]["date"]}）</h2>'
+                + score_cards(s, prev) + "</section>"
+            )
+    else:
+        s = latest["score"]
+        prev = legacy[-2]["score"] if len(legacy) > 1 else None
+        home_hero = hero(s, latest["report_md"])
+        body += '<section class="block"><h2>六維度評分</h2>' + score_cards(s, prev) + readmore + "</section>"
+        if forecasts:
+            body += '<section class="block"><h2>預測時間線</h2>' + forecast_timeline(forecasts) + "</section>"
+    if legacy:
+        chart, chart_script = chart_html(legacy)
+        body += '<section class="block"><h2>歷史分數趨勢</h2>' + chart + "</section>"
+    body += '<section class="block"><h2>過往報告</h2>' + history_table(runs) + "</section>"
     (OUT / "index.html").write_text(
         page(
             "市場泡沫風險評估",
             f'最新 {latest["date"]}',
-            hero(s, latest["report_md"]),
+            home_hero,
             body,
             "./",
             chart_script,
