@@ -13,6 +13,7 @@ Requires: pip install markdown
 """
 import html as htmllib
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -512,6 +513,38 @@ def forecast_timeline(runs):
     )
 
 
+def normalize_forecast(data, folder_date):
+    """Keep only well-formed forecast fields; anything else becomes None so a
+    malformed value renders as a dash instead of aborting the whole build."""
+    def answer(v):
+        return v if isinstance(v, str) and v in ("yes", "no") else None
+
+    def day(v):
+        return v if isinstance(v, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", v) else ""
+
+    def text(v):
+        return v if isinstance(v, str) else ""
+
+    r1 = data.get("r1_drawdown_pct")
+    try:
+        r1 = float(r1) if not isinstance(r1, bool) and isinstance(r1, (int, float)) else None
+    except OverflowError:
+        r1 = None
+    if r1 is not None and not (math.isfinite(r1) and 0 <= r1 <= 100):
+        r1 = None
+    return {
+        "answer": answer(data.get("answer")),
+        "resolution": answer(data.get("resolution")),
+        "prior_answer": answer(data.get("prior_answer")),
+        "prior_date": day(data.get("prior_date")),
+        "horizon_end": day(data.get("horizon_end")),
+        "date": folder_date,
+        "iso_week": text(data.get("iso_week")),
+        "weekday": text(data.get("weekday")),
+        "r1_drawdown_pct": r1,
+    }
+
+
 def load_runs():
     runs = []
     for d in sorted(ROOT.glob("report-????-??-??")):
@@ -535,7 +568,7 @@ def load_runs():
             "date": d.name.removeprefix("report-"),
             "kind": kind,
             "score": data if kind == "legacy" else None,
-            "forecast": data if kind == "forecast" else None,
+            "forecast": normalize_forecast(data, d.name.removeprefix("report-")) if kind == "forecast" else None,
             "report_md": report_f.read_text(encoding="utf-8"),
         })
     runs.sort(key=lambda r: r["date"])
